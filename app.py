@@ -64,7 +64,7 @@ def delete_event(event_id):
     for i, event in enumerate(events):
         if event.id == event_id:
             events.pop(i)
-            return jsonify({"message": "Event deleted"}), 200
+            return "", 204
 
     return jsonify({"error": "Event not found"}), 404
 
